@@ -1,105 +1,146 @@
+
 import Link from "next/link";
 import {
-  ArrowUpRight,
   ArrowRight,
+  ArrowUpRight,
   BrainCircuit,
   Code2,
   GraduationCap,
-  Mic2,
   Languages,
+  Mic2,
   Sparkles,
 } from "lucide-react";
 
-// ==========================================
-// PROFESSIONAL AREAS
-// ==========================================
-
-const expertise = [
-  {
-    label: "Software Engineering",
-    icon: Code2,
-  },
-  {
-    label: "Artificial Intelligence",
-    icon: BrainCircuit,
-  },
-  {
-    label: "Human Language Technology",
-    icon: Languages,
-  },
-];
-
-// ==========================================
-// HOME HERO COMPONENT
-// ==========================================
-
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[calc(100dvh-5rem)] w-full items-center overflow-hidden bg-[#F8FAFC] transition-colors duration-300 dark:bg-[#0B1120]">
-
-      {/* Background Decoration */}
+    <section
+      id="home"
+      className="
+        relative w-full overflow-hidden
+        bg-[#0b1020] text-white
+        lg:min-h-[calc(100dvh-84px)]
+      "
+    >
+      {/* Background glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-blue-400/15 blur-3xl dark:bg-blue-600/15"
+        className="
+          pointer-events-none absolute
+          right-0 top-0 h-[600px] w-[600px]
+          rounded-full bg-blue-600/10 blur-[120px]
+        "
       />
 
       <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl dark:bg-cyan-500/10"
-      />
+        className="
+          relative z-10 mx-auto grid
+          w-full max-w-7xl
+          grid-cols-1 items-center
+          gap-12 px-5 py-12
+          sm:px-8 sm:py-16
+          lg:grid-cols-2 lg:gap-14
+          lg:px-7 lg:py-12
+        "
+      >
+        {/* ====================================
+            LEFT SECTION - INTRODUCTION
+        ==================================== */}
 
-      {/* Main Hero Container */}
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 px-5 py-10 sm:px-8 sm:py-12 lg:grid-cols-2 lg:gap-14">
-
-        {/* ===================================
-            LEFT: INTRODUCTION
-        =================================== */}
-
-        <div className="relative z-10">
-
-          {/* Professional Label */}
-          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-semibold tracking-wide text-blue-700 dark:border-cyan-400/20 dark:bg-cyan-400/5 dark:text-cyan-300">
-
-            <Sparkles
-              size={15}
-              className="shrink-0"
-            />
-
+        <div
+          className="
+            order-1 flex w-full min-w-0
+            flex-col items-center text-center
+            lg:items-start lg:text-left
+          "
+        >
+          {/* Professional Badge */}
+          <div
+            className="
+              mb-7 inline-flex items-center
+              gap-2 rounded-full
+              border border-cyan-500/30
+              bg-cyan-500/10
+              px-4 py-2
+              text-[11px] font-semibold
+              tracking-wide text-cyan-400
+              sm:text-xs
+            "
+          >
+            <Sparkles size={15} />
             SOFTWARE ENGINEER · AI RESEARCHER
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl dark:text-white">
-
-            Hello, I&#39;m
-
-            <span className="mt-2 block bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-cyan-300 dark:to-teal-300">
+          <h1
+            className="
+              max-w-2xl
+              text-4xl font-extrabold
+              leading-[1.12] tracking-tight
+              sm:text-5xl
+              lg:text-[58px]
+            "
+          >
+            Hello, I&apos;m
+            <span
+              className="
+                mt-3 block
+                bg-gradient-to-r
+                from-blue-500 via-cyan-400 to-teal-400
+                bg-clip-text text-transparent
+              "
+            >
               Otavie Okuoyo.
             </span>
           </h1>
 
-          {/* Professional Headline */}
-          <h2 className="mt-6 max-w-xl text-xl font-semibold leading-snug text-slate-700 sm:text-2xl dark:text-slate-200">
+          {/* Tagline */}
+          <h2
+            className="
+              mt-7 text-xl font-semibold
+              leading-snug text-slate-200
+              sm:text-2xl
+            "
+          >
             Building software.
             <span className="block">
               Advancing language technology.
             </span>
           </h2>
 
-          {/* Brief Introduction */}
-          <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg dark:text-slate-400">
-            I&#39;m a software engineer, lecturer, and PhD
-            researcher passionate about building modern
-            digital solutions and advancing artificial
-            intelligence for African languages.
+          {/* Description */}
+          <p
+            className="
+              mt-7 max-w-lg
+              text-base leading-8 text-slate-400
+              sm:text-lg
+            "
+          >
+            I&apos;m a software engineer, lecturer, and
+            PhD researcher passionate about building
+            modern digital solutions and advancing
+            artificial intelligence for African languages.
           </p>
 
           {/* Action Buttons */}
-          <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-
+          <div
+            className="
+              mt-9 flex w-full
+              flex-wrap justify-center gap-4
+              sm:w-auto
+              lg:justify-start
+            "
+          >
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/15 transition-all hover:-translate-y-0.5 hover:bg-blue-500"
+              className="
+                inline-flex items-center justify-center
+                gap-3 rounded-xl bg-blue-600
+                px-6 py-4
+                text-sm font-semibold text-white
+                shadow-lg shadow-blue-600/20
+                transition-all duration-300
+                hover:-translate-y-1 hover:bg-blue-500
+              "
             >
               View My Projects
               <ArrowUpRight size={18} />
@@ -107,7 +148,16 @@ export default function Hero() {
 
             <Link
               href="/research"
-              className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 transition-all hover:border-blue-500 hover:text-blue-600 dark:border-white/20 dark:bg-white/5 dark:text-slate-100 dark:hover:border-cyan-400 dark:hover:text-cyan-300"
+              className="
+                inline-flex items-center justify-center
+                gap-3 rounded-xl
+                border border-slate-600
+                bg-white/5 px-6 py-4
+                text-sm font-semibold text-slate-100
+                transition-all duration-300
+                hover:border-cyan-400
+                hover:bg-white/10
+              "
             >
               My Research
               <ArrowRight size={18} />
@@ -115,147 +165,217 @@ export default function Hero() {
           </div>
 
           {/* Professional Roles */}
-          <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-slate-200 pt-6 text-sm font-medium text-slate-600 dark:border-white/10 dark:text-slate-400">
-
+          <div
+            className="
+              mt-9 flex w-full
+              flex-wrap justify-center gap-x-5 gap-y-3
+              border-t border-white/10
+              pt-6 text-sm text-slate-400
+              lg:justify-start
+            "
+          >
             <span className="inline-flex items-center gap-2">
-              <Code2
-                size={18}
-                className="text-blue-600 dark:text-cyan-400"
-              />
+              <Code2 size={16} className="text-cyan-400" />
               Software Engineer
             </span>
 
             <span className="inline-flex items-center gap-2">
               <BrainCircuit
-                size={18}
-                className="text-blue-600 dark:text-cyan-400"
+                size={16}
+                className="text-cyan-400"
               />
               AI Researcher
             </span>
 
             <span className="inline-flex items-center gap-2">
               <GraduationCap
-                size={18}
-                className="text-blue-600 dark:text-cyan-400"
+                size={16}
+                className="text-cyan-400"
               />
               Lecturer
             </span>
           </div>
         </div>
 
-        {/* ===================================
-            RIGHT: PROFESSIONAL PROFILE CARD
-            Visible on desktop screens
-        =================================== */}
+        {/* ====================================
+            RIGHT SECTION - RESEARCH PROFILE
+        ==================================== */}
 
-        <div className="relative hidden w-full lg:block">
-
-          {/* Card Glow */}
+        <div
+          className="
+            order-2 w-full min-w-0
+            max-w-xl justify-self-center
+            lg:max-w-none
+          "
+        >
+          {/* Profile Window */}
           <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-blue-400/15 via-transparent to-cyan-400/15 blur-2xl dark:from-blue-600/20 dark:to-cyan-500/20"
-          />
-
-          {/* Main Profile Card */}
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white/85 p-7 shadow-2xl shadow-slate-200/50 backdrop-blur-xl dark:border-white/10 dark:bg-[#111C32]/90 dark:shadow-black/20">
-
-            {/* Top Label */}
-            <div className="mb-8 flex items-center justify-between">
-
+            className="
+              w-full rounded-3xl
+              border border-slate-700/70
+              bg-[#111b31]/90
+              p-4 shadow-2xl
+              sm:p-7
+            "
+          >
+            {/* Window Header */}
+            <div className="mb-7 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-red-400" />
                 <span className="h-3 w-3 rounded-full bg-yellow-400" />
                 <span className="h-3 w-3 rounded-full bg-green-400" />
               </div>
 
-              <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
+              <span className="font-mono text-xs text-slate-400">
                 otavie.profile
               </span>
             </div>
 
-            {/* Research Feature */}
-            <div className="rounded-2xl border border-blue-100 bg-blue-50/80 p-7 dark:border-blue-400/15 dark:bg-[#0B1120]">
-
-              <div className="mb-6 inline-flex rounded-xl bg-blue-100 p-3 text-blue-600 dark:bg-blue-500/15 dark:text-cyan-400">
-                <BrainCircuit size={30} />
+            {/* Main Research Card */}
+            <div
+              className="
+                rounded-2xl
+                border border-blue-500/20
+                bg-[#0b1020]
+                p-5 sm:p-7
+              "
+            >
+              {/* AI Icon */}
+              <div
+                className="
+                  mb-6 flex h-14 w-14
+                  items-center justify-center
+                  rounded-xl bg-blue-500/15
+                  text-cyan-400
+                "
+              >
+                <BrainCircuit size={29} />
               </div>
 
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-blue-600 dark:text-cyan-400">
+              <p
+                className="
+                  mb-4 text-xs font-bold
+                  uppercase tracking-[0.2em]
+                  text-cyan-400
+                "
+              >
                 Research Focus
               </p>
 
-              <h3 className="text-2xl font-bold leading-snug text-slate-900 dark:text-white">
+              <h3
+                className="
+                  text-xl font-bold
+                  leading-tight text-white
+                  sm:text-2xl
+                "
+              >
                 AI for African Languages
               </h3>
 
-              <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                Advancing intelligent speech and language
-                technologies through multilingual models
-                and parameter-efficient adaptation.
+              <p
+                className="
+                  mt-5 text-sm leading-7
+                  text-slate-400
+                "
+              >
+                Advancing intelligent speech and
+                language technologies through
+                multilingual models and
+                parameter-efficient adaptation.
               </p>
 
-              {/* Expertise Tags */}
+              {/* Research Tags */}
               <div className="mt-6 flex flex-wrap gap-2">
+                <span
+                  className="
+                    inline-flex items-center gap-2
+                    rounded-lg border border-slate-700
+                    bg-white/10 px-3 py-2
+                    text-xs text-slate-300
+                  "
+                >
+                  <Code2 size={14} />
+                  Software Engineering
+                </span>
 
-                {expertise.map((item) => {
-                  const Icon = item.icon;
+                <span
+                  className="
+                    inline-flex items-center gap-2
+                    rounded-lg border border-slate-700
+                    bg-white/10 px-3 py-2
+                    text-xs text-slate-300
+                  "
+                >
+                  <BrainCircuit size={14} />
+                  Artificial Intelligence
+                </span>
 
-                  return (
-                    <span
-                      key={item.label}
-                      className="inline-flex items-center gap-2 rounded-lg border border-blue-100 bg-white px-3 py-2 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-slate-300"
-                    >
-                      <Icon size={14} />
-                      {item.label}
-                    </span>
-                  );
-                })}
+                <span
+                  className="
+                    inline-flex items-center gap-2
+                    rounded-lg border border-slate-700
+                    bg-white/10 px-3 py-2
+                    text-xs text-slate-300
+                  "
+                >
+                  <Languages size={14} />
+                  Human Language Technology
+                </span>
               </div>
             </div>
 
-            {/* Bottom Cards */}
-            <div className="mt-5 grid grid-cols-2 gap-4">
-
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-white/10 dark:bg-white/5">
-
+            {/* Research and Development Cards */}
+            <div
+              className="
+                mt-5 grid grid-cols-1 gap-4
+                sm:grid-cols-2
+              "
+            >
+              {/* Research Card */}
+              <div
+                className="
+                  rounded-xl border border-slate-600/60
+                  bg-slate-700/40 p-5
+                  transition-colors
+                  hover:border-cyan-500/50
+                "
+              >
                 <Mic2
                   size={24}
-                  className="mb-4 text-blue-600 dark:text-cyan-400"
+                  className="mb-5 text-cyan-400"
                 />
 
-                <h4 className="font-semibold text-slate-900 dark:text-white">
+                <h4 className="text-base font-semibold text-white">
                   Research
                 </h4>
 
-                <p className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">
-                  AI & Human Language Technology
+                <p className="mt-2 text-xs leading-5 text-slate-400">
+                  AI &amp; Human Language Technology
                 </p>
               </div>
 
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-5 dark:border-white/10 dark:bg-white/5">
-
+              {/* Development Card */}
+              <div
+                className="
+                  rounded-xl border border-slate-600/60
+                  bg-slate-700/40 p-5
+                  transition-colors
+                  hover:border-cyan-500/50
+                "
+              >
                 <Code2
                   size={24}
-                  className="mb-4 text-blue-600 dark:text-cyan-400"
+                  className="mb-5 text-cyan-400"
                 />
 
-                <h4 className="font-semibold text-slate-900 dark:text-white">
+                <h4 className="text-base font-semibold text-white">
                   Development
                 </h4>
 
-                <p className="mt-2 text-xs leading-5 text-slate-600 dark:text-slate-400">
-                  Modern Software & Web Solutions
+                <p className="mt-2 text-xs leading-5 text-slate-400">
+                  Modern Software &amp; Web Solutions
                 </p>
               </div>
-            </div>
-
-            {/* Card Footer */}
-            <div className="mt-6 border-t border-slate-200 pt-5 font-mono text-xs text-slate-500 dark:border-white/10 dark:text-slate-400">
-              <span className="mr-2 text-green-600 dark:text-green-400">
-                $
-              </span>
-              Research. Build. Teach.
-              <span className="ml-1 text-cyan-500">_</span>
             </div>
           </div>
         </div>
