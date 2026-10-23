@@ -61,7 +61,7 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="font-mono text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
+              className="font-mono text-2xl font-bold tracking-tight text-slate-900 dark:text-white cursor-pointer"
             >
               <span className="text-blue-600 dark:text-cyan-400">
                 &lt;
@@ -96,7 +96,7 @@ export default function Footer() {
           {/* Collaboration */}
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
-              Let&apo;s Connect
+              Let&#39;s Connect
             </h3>
 
             <p className="mb-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
@@ -113,16 +113,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="mt-12 flex flex-col gap-5 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between dark:border-white/10">
-
+        <div className="mt-12 grid grid-cols-1 items-center justify-items-center gap-5 border-t border-slate-200 pt-6 md:grid-cols-3 md:justify-items-stretch dark:border-white/10"
+        >
           {/* Copyright */}
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            © {currentYear} Otavie Okuoyo. <br />
-            All rights reserved.
+          <p
+            className="text-center text-sm leading-relaxed text-slate-500 md:text-left dark:text-slate-400"
+          >
+            © {currentYear} Otavie Okuoyo. All rights reserved.
           </p>
 
           {/* Social Media Links */}
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex items-center justify-center gap-6">
             {socialLinks.map((social) => {
               const Icon = social.icon;
 
@@ -146,12 +147,14 @@ export default function Footer() {
           <a
             href="#main-content"
             aria-label="Back to top of main content"
-            className="inline-flex w-fit items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400"
+            className="inline-flex w-fit items-center justify-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-blue-600 md:justify-self-end dark:text-slate-400dark:hover:text-cyan-400
+            "
           >
             Back to Top
             <ArrowUp size={17} />
           </a>
         </div>
+
       </div>
     </footer>
   );

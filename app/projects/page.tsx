@@ -5,25 +5,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
-import {
-  ArrowRight,
-  ArrowUpRight,
-  Code2,
-  Layers3,
-  Sparkles,
-} from "lucide-react";
+import {ArrowRight, ArrowUpRight, Code2, Layers3, Sparkles,} from "lucide-react";
 
 // ==============================================
 // IMPORT PROJECT DATA
 // ==============================================
 
-import {
-  projects,
-  projectFilters,
-  type Project,
-  type ProjectFilter,
-} from "@/data/projects";
+import { projects, projectFilters, type Project, type ProjectFilter,} from "@/data/projects";
 
 // ==============================================
 // PROJECT CARD COMPONENT
@@ -38,36 +26,17 @@ function ProjectCard({
 
   return (
     <article
-      className="
-        group flex h-full flex-col overflow-hidden
-        rounded-2xl border border-slate-200
-        bg-white shadow-sm
-        transition-all duration-300
-        hover:-translate-y-1
-        hover:border-cyan-500/50
-        hover:shadow-xl
-        dark:border-slate-700/60
-        dark:bg-[#111b31]
-        dark:shadow-none
-        dark:hover:shadow-blue-950/30
-      "
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200
+        bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50
+        hover:shadow-xl dark:border-slate-700/60 dark:bg-[#111b31] dark:shadow-none dark:hover:shadow-blue-950/30"
     >
       {/* Project Visual Header */}
       <div
-        className={`
-          relative flex h-44 items-center
-          justify-center overflow-hidden
-          bg-gradient-to-br ${project.gradient}
-        `}
+        className={`relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br ${project.gradient}`}
       >
         {/* Background Decorations */}
         <div
-          className="
-            absolute -right-12 -top-16
-            h-48 w-48 rounded-full
-            border border-blue-200/50
-            dark:border-white/10
-          "
+          className="absolute -right-12 -top-16 h-48 w-48 rounded-full border border-blue-200/50 dark:border-white/10"
         />
 
         <div
