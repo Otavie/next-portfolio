@@ -21,7 +21,7 @@ const footerLinks = [
 // ==========================================
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+    const currentYear = 2026;
 
   return (
     <footer className="w-full border-t border-slate-200 bg-slate-100 text-slate-700 dark:border-white/10 dark:bg-[#080E1C] dark:text-slate-300">
