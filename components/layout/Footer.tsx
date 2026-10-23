@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { ArrowUpRight, ArrowUp } from "lucide-react";
+// Social Media Icons
+import {FaLinkedin, FaGithub, FaXTwitter, } from "react-icons/fa6";
 
 // ==========================================
 // FOOTER NAVIGATION LINKS
@@ -15,6 +17,30 @@ const footerLinks = [
   { name: "Publications", href: "/publications" },
   { name: "Contact", href: "/contact" },
 ];
+
+// ==========================================
+// SOCIAL MEDIA LINKS
+// Replace YOUR_USERNAME with your usernames
+// ==========================================
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/Otavie",
+    icon: FaLinkedin,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Otavie",
+    icon: FaGithub,
+  },
+  {
+    name: "Twitter",
+    href: "https://x.com/LoveOtavie",
+    icon: FaXTwitter,
+  },
+];
+
 
 // ==========================================
 // FOOTER COMPONENT
@@ -42,16 +68,11 @@ export default function Footer() {
               </span>
 
               Otavie
-
-              <span className="text-blue-600 dark:text-cyan-400">
-                {" />"}
-              </span>
+              <span className="text-blue-600 dark:text-cyan-400">{" />"}</span>
             </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-slate-600 dark:text-slate-400">
-              Otavie Okuoyo - Software Engineer,
-              Lecturer, and AI Researcher passionate
-              about technology, research, and education.
+              Otavie Okuoyo - Software Engineer, Lecturer, and AI Researcher passionate about technology, research, and education.
             </p>
           </div>
 
@@ -63,9 +84,7 @@ export default function Footer() {
 
             <div className="grid grid-cols-2 gap-3">
               {footerLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
+                <Link key={link.name} href={link.href}
                   className="text-sm text-slate-600 transition-colors hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400"
                 >
                   {link.name}
@@ -77,18 +96,15 @@ export default function Footer() {
           {/* Collaboration */}
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
-              Let&#39;s Connect
+              Let&apo;s Connect
             </h3>
 
             <p className="mb-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
-              Interested in software development,
-              artificial intelligence, or research
-              collaboration? Let&#39;s connect.
+              Interested in software development, artificial intelligence, or research collaboration? Let&#39;s connect.
             </p>
 
             <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3 dark:text-cyan-400"
+              href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3 dark:text-cyan-400"
             >
               Get in Touch
               <ArrowUpRight size={17} />
@@ -101,9 +117,30 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            © {currentYear} Otavie Okuoyo.
+            © {currentYear} Otavie Okuoyo. <br />
             All rights reserved.
           </p>
+
+          {/* Social Media Links */}
+          <div className="flex items-center justify-center gap-5">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+
+              return (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  title={social.name}
+                  className="inline-flex items-center justify-center text-slate-500 transition-all duration-300 hover:-translate-y-1 hover:text-blue-600 dark:text-slate-400 dark:hover:text-cyan-400"
+                >
+                  <Icon size={20} strokeWidth={1.8} />
+                </a>
+              );
+            })}
+          </div>
 
           {/* Back to Top */}
           <a
