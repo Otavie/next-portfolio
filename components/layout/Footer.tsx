@@ -49,7 +49,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-slate-600 dark:text-slate-400">
-              Otavie Okuoyo — Software Engineer,
+              Otavie Okuoyo - Software Engineer,
               Lecturer, and AI Researcher passionate
               about technology, research, and education.
             </p>
@@ -77,13 +77,13 @@ export default function Footer() {
           {/* Collaboration */}
           <div>
             <h3 className="mb-5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
-              Let&#389;s Connect
+              Let&#39;s Connect
             </h3>
 
             <p className="mb-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
               Interested in software development,
               artificial intelligence, or research
-              collaboration? Let&#389;s connect.
+              collaboration? Let&#39;s connect.
             </p>
 
             <Link
@@ -103,11 +103,6 @@ export default function Footer() {
           <p className="text-sm text-slate-500 dark:text-slate-400">
             © {currentYear} Otavie Okuoyo.
             All rights reserved.
-          </p>
-
-          {/* Technology */}
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            Built with Next.js & Tailwind CSS
           </p>
 
           {/* Back to Top */}
