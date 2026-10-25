@@ -117,7 +117,7 @@ export default function Navbar() {
             }
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-900 transition-colors hover:bg-slate-100 lg:hidden dark:border-white/10 dark:text-white dark:hover:bg-white/10"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-900 transition-colors hover:bg-slate-100 lg:hidden dark:border-white/10 dark:text-white dark:hover:bg-white/10 cursor-pointer"
           >
             {isOpen ? <X size={23} /> : <Menu size={23} />}
           </button>
