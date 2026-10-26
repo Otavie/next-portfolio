@@ -165,7 +165,7 @@ export default function AboutPage() {
 
             {/* Biography */}
             <div className="mt-7 max-w-xl space-y-5 text-base leading-8 text-slate-600 dark:text-slate-400">
-              <p>I am a software engineer, lecturer, and PhD researcher in the Department of Computer and Information Sciences at Covenant University, Nigeria.</p>
+              <p>I am a software engineer, lecturer, and researcher in the Department of Computer and Information Sciences at Covenant University, Nigeria.</p>
 
               <p>My academic and professional interests lie at the intersection of software engineering, artificial intelligence, and human language technology, with a particular emphasis on African Natural Language Processing (African NLP).</p>
 
